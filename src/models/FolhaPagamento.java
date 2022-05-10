@@ -1,18 +1,18 @@
 package models;
 
-public class Pagamento {
+public class FolhaPagamento {
 	
-	private String pagamento;
+	private Funcionario funcionario;
 	private int mes;
 	private int ano;
 	private int horasTrabalhadas;
 	private double valorHora;
 	
-	public String getPagamento() {
-		return pagamento;
+	public Funcionario getFuncionario() {
+		return funcionario;
 	}
-	public void setPagamento(String pagamento) {
-		this.pagamento = pagamento;
+	public void setFuncionario(Funcionario funcionario) {
+		this.funcionario = funcionario;
 	}
 	
 	public int getMes() {
@@ -47,11 +47,11 @@ public class Pagamento {
 	public String toString() {
 		
 		return("\n"
-				+" Pagamento: "+pagamento+"\n"
-				+" MÊS: "+mes+"\n"
-				+" ANO: "+ano+"\n"
-				+" Horas Trabalhadas: "+horasTrabalhadas+"\n"
-				+" Valor da Hora: "+valorHora
+				+" Colaborador: "+getFuncionario()+"\n"
+				+" MÊS: "+getMes()+"\n"
+				+" ANO: "+getAno()+"\n"
+				+" Horas Trabalhadas: "+getHorasTrabalhadas()+"\n"
+				+" Valor da Hora: "+getValorHora()
 				+"\n");
 	}
 }

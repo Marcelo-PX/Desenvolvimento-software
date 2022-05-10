@@ -20,11 +20,5 @@ public class Funcionario{
     public void setCpf(String cpf){
         this.cpf = cpf;
     }
-
-    @Override
-    public String toString(){
-        return 
-            "NOME: "+nome+ 
-            "\nCPF: "+cpf;
-    }   
+    
 }

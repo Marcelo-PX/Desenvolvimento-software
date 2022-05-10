@@ -1,18 +1,29 @@
 package views;
 
-import utils.Console;
-import controllers.PagamentoController;
 import controllers.FuncionarioController;
+import controllers.PagamentoController;
 import models.Funcionario;
-import models.Pagamento;
+import models.FolhaPagamento;
+import utils.Console;
 
-public class CadastrarPagamento {
+public class Cadastro {
 
-    public void render(){
+    public void cadastrarFuncionario(){
+    	
+        Funcionario funcionario = new Funcionario();        
+        FuncionarioController funcionarioController = new FuncionarioController();
+        System.out.println("\n--CADASTRO DE COLABORADORES--\n");
+        funcionario.setNome(Console.readString("Digite o NOME do Colaborador: "));
+        funcionario.setCpf(Console.readString("Digite o CPF do Colaborador: "));        
+        funcionarioController.cadastrar(funcionario);
+        System.out.println("\n--COLABORADOR CADASTRADO--\n");
+    }
     
+    public void cadastrarPagamento(){
+        
         System.out.println("\n--CADASTRO FOLHA DE PAGAMENTO--\n");
 
-        Pagamento pagamento = new Pagamento(); 
+        FolhaPagamento pagamento = new FolhaPagamento(); 
         
         PagamentoController pagamentoController = new PagamentoController();
         FuncionarioController funcionarioController = new FuncionarioController();
@@ -23,8 +34,7 @@ public class CadastrarPagamento {
         if (funcionario !=null){
         	
         	System.out.println("\n--CADASTRO DE FOLHA DE PAGAMENTO--\n");
-            pagamento.setPagamento(Console.readString("Informe o pagamento: "));
-            pagamento.setMes(Console.readInt("Informe o mês: "));
+            pagamento.setMes(Console.readInt("Informe o mÃªs: "));
             pagamento.setAno(Console.readInt("Informe o ano: "));
             pagamento.setHorasTrabalhadas(Console.readInt("Informe as horas trabalhadas: "));
             pagamento.setValorHora(Console.readDouble("Informe o valor da hora: "));
@@ -34,7 +44,8 @@ public class CadastrarPagamento {
             System.out.println("\n--PAGAMENTO CADASTRADO--\n");
      
         }else{
-            System.out.println("Funcionário não encontrado!");
+            System.out.println("FuncionÃ¡rio nÃ£o encontrado!");
         }
     }
+    
 }

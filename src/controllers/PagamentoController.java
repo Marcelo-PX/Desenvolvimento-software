@@ -1,17 +1,17 @@
 package controllers;
 
 import java.util.ArrayList;
-import models.Pagamento;
+import models.FolhaPagamento;
 
 public class PagamentoController {
 
-    private static ArrayList<Pagamento> folhas = new ArrayList<Pagamento>();
+    private static ArrayList<FolhaPagamento> folhas = new ArrayList<FolhaPagamento>();
 
-    public void cadastrar(Pagamento pagamento) {
+    public void cadastrar(FolhaPagamento pagamento) {
         folhas.add(pagamento);
     }
 
-    public ArrayList<Pagamento> listar() {
+    public ArrayList<FolhaPagamento> listar() {
         return folhas;
     }
     

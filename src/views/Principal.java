@@ -8,10 +8,8 @@ public class Principal {
 		
 		int opcao = 0;
 		
-		CadastrarFuncionario cadastrarFuncionario = new CadastrarFuncionario();
-		ListarFuncionarios listarFuncionario = new ListarFuncionarios();
-		CadastrarPagamento cadastrarPagamento = new CadastrarPagamento();
-		ListarPagamento listarPagamento = new ListarPagamento();
+		Cadastro cadastro = new Cadastro();
+		Lista lista = new Lista();
 		
 		do{
 			System.out.printf("%n"+
@@ -30,19 +28,19 @@ public class Principal {
 			switch (opcao){
 			
 				case 1:
-					cadastrarFuncionario.render();
+					cadastro.cadastrarFuncionario();
 					break;
 					
 				case 2:
-					listarFuncionario.render();
+					lista.listarFuncionario();
 					break;
 				
 				case 3:
-					cadastrarPagamento.render();
+					cadastro.cadastrarPagamento();
 					break;
 				
 				case 4:
-					listarPagamento.render();
+					lista.listarPagamento();
 					break;
 					
 				case 5:
